@@ -1,16 +1,23 @@
 'use client';
-import CodeMirror, { ViewUpdate } from '@uiw/react-codemirror';
+import CodeMirror from '@uiw/react-codemirror';
 import { json as jsonLang } from '@codemirror/lang-json';
 import { ModeEnum } from '@/lib/constant';
+import { OnChange, Theme } from '@/types/editor';
 
 type Props = {
   mode: ModeEnum;
   value?: string;
-  theme?: 'light' | 'dark' | 'none';
-  onChange?: (value: string, viewUpdate: ViewUpdate) => void;
+  theme?: Theme;
+  onChange?: OnChange;
 }
 
-export default function CodeMirrorEditor({ mode, value, onChange,theme }: Props) {
+export default function CodeMirrorEditor(
+  {
+    mode,
+    value,
+    onChange,
+    theme
+  }: Props) {
   return (
     <CodeMirror
         value={value}

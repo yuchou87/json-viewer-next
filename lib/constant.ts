@@ -1,6 +1,7 @@
 export enum ModeEnum { 
   Editor = 'editor',
   Viewer = 'viewer',
+  Diff = 'diff',
 };
 
 export const defaultPlaceHolder = `{
@@ -26,3 +27,10 @@ export const defaultPlaceHolder = `{
 }`;
 
 export const defaultThemes = ['Light', 'Dark'];
+
+export const EditorEnum = {
+  CodeMirror: 'CodeMirror',
+  Monaco: 'Monaco',
+};
+
+export const defaultEditors = [EditorEnum.CodeMirror, EditorEnum.Monaco];
