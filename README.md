@@ -31,7 +31,11 @@ Success! Project initialization completed.
 You may now add components.
 
 # add button component for testing
-bunx --bun shadcn@latest add button
+bunx --bun shadcn@latest add button resizable
+
+
+# add codemirror
+bun add @uiw/react-codemirror @codemirror/lang-json @uiw/react-json-view
 
 # clone repo
 https://github.com/yuchou87/json-viewer-next.git
